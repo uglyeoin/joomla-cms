@@ -44,6 +44,7 @@ class ContentViewCategory extends JViewCategoryfeed
 		if (isset($introImage) && ($introImage != ''))
 		{
 			$image = preg_match('/http/', $introImage) ? $introImage : JURI::root() . $introImage;
+			// Does not need to have an image in the description. Nor surround with a P
 			$item->description = '<p><img src="' . $image . '" /></p>';
 		}
 
